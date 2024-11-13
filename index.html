@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inicio de Sesión Estudiantes</title>
+    <link rel="stylesheet" href="calificacion.css">
+</head>
+<body>
+    <div class="container">
+        <h1>INICIAR SESIÓN EDUCACIÓN MUSICAL</h1>
+        <form id="loginForm">
+            <label for="username">Usuario</label>
+            <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+
+            <!--<label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
+            <button type="button" onclick="login()">Ingresar</button>-->
+            <div class="password-container">
+                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">
+                    <img src="ojo2.png" alt=" " id="eyeIcon" width="20px" height="20px">
+                </span>
+            </div>
+
+            <button type="button" onclick="login()">Ingresar</button>
+        </form>
+
+        <!-- Contenido de la plataforma para el estudiante -->
+        <div id="studentContent" style="display: none;">
+            
+            <h2 id="welcomeMessage">Bienvenido 6to de Secundaria</h2>
+
+            <button onclick="downloadGrades()">Descargar Notas de Calificación</button>
+            <button onclick="logout()">Salir</button>
+        </div>
+    </div>
+
+    <script src="calificacion.js"></script>
+</body>
+</html>
+
